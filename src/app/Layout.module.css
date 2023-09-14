@@ -1,19 +1,19 @@
-.wrapper{
+.wrapper {
     display: flex;
     justify-items: center;
     align-items: flex-start;
+}
 
-    .config, .result{
-        width: 50%;
-        height: 100vh;
-    }
+.config, .result {
+    width: 50%;
+    height: 100vh;
+}
 
-    .config{
-        background-color: #e0e0e0;
-    }
-    
-    .result{
-        background-color: #f7f7f7;
-        overflow-y: scroll;
-    }
+.config {
+    background-color: #eee;
+}
+
+.result {
+    background-color: #f7f7f7;
+    overflow-y: auto;
 }

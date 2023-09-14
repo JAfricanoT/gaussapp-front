@@ -1,8 +1,7 @@
 import './globals.css'
 import { Inter } from 'next/font/google'
-import { menu } from '@/lib/menu'
-import Image from 'next/image'
 import styles from './Layout.module.css'
+import Menu from './menu'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -17,19 +16,9 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <main className={styles.wrapper}>
           <div className={styles.config}>
-            <nav className={styles.navbar}>
-              {menu.map(operations => (
-                <ul key={operations.title} className={styles.menuWrapper}>
-                  <li className={styles.menu}>
-                    <Image alt={operations.title + ' Icon'} src={'/favicon.ico'} width={100} height={100} />
-                    <div>{operations.title}</div>
-                  </li>
-                </ul>
-              ))}
-            </nav>
+            <Menu/>
           </div>
           <div className={styles.result}>
-            <div>hola</div>
             {children}
           </div>
         </main>
