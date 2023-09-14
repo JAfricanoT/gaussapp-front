@@ -1,4 +1,29 @@
-.config{
-    width: 100px;
-    background-color: aquamarine;
+.wrapper{
+    display: flex;
+    justify-items: center;
+    align-items: flex-start;
+
+    .config, .result{
+        width: 50%;
+        height: 100vh;
+    }
+
+    .config{
+        background-color: #e0e0e0;
+    }
+    
+    .result{
+        background-color: #f7f7f7;
+        overflow-y: scroll;
+    }
 }
+
+/* .config{
+    width: 50%;
+    background-color: #e0e0e0;
+}
+
+.result{
+    width: 50%;
+    background-color: #f7f7f7;
+} */
