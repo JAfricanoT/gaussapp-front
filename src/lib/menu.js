@@ -12,9 +12,9 @@ export const menu = [
         "link": "./interpolation", 
     },
     {
-        "status": false,
+        "status": true,
         "icon": "/matrix.png",
-        "title": "Operación 3", 
-        "link": "./", 
+        "title": "Auto valores", 
+        "link": "./autovalores", 
     }
 ]

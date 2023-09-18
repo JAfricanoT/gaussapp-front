@@ -20,7 +20,7 @@ export default function Home() {
   // console.log(JSONdata)
 
   // API endpoint para enviar los datos.
-  const endpoint = 'http://127.0.0.1:8000/interpolacion?random=false'
+  const endpoint = 'http://127.0.0.1:8000/interpolacion?random=true'
 
   // Headers con los que se envian los datos a la API
   const options = {
