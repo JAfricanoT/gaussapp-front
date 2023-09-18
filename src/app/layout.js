@@ -1,7 +1,7 @@
 import './globals.css'
 import { Inter } from 'next/font/google'
 import styles from './Layout.module.css'
-import Menu from './menu'
+import Menu from './Menu'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -14,14 +14,14 @@ export default function RootLayout({ children }) {
   return (
     <html lang="es">
       <body className={inter.className}>
-        <main className={styles.wrapper}>
-          <div className={styles.config}>
-            <Menu/>
+        <div className={styles.wrapper}>
+          <div className={styles.menu}>
+            <Menu />
           </div>
-          <div className={styles.result}>
+          <main className={styles.contentWrapper}>
             {children}
-          </div>
-        </main>
+          </main>
+        </div>
       </body>
     </html>
   )

@@ -2,18 +2,15 @@
     display: flex;
     justify-items: center;
     align-items: flex-start;
-}
-
-.config, .result {
-    width: 50%;
     height: 100vh;
+    width: 100vw;
 }
 
-.config {
-    background-color: #eee;
+.menu{
+    width: var(--navbar-width);
+    height: 100%;
 }
 
-.result {
-    background-color: #f7f7f7;
-    overflow-y: auto;
+.contentWrapper{
+    width: calc(100% - var(--navbar-width));
 }
