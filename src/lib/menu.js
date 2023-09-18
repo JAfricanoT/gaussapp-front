@@ -1,14 +1,20 @@
 export const menu = [
     {
-        "icon": "test",
-        "title": "Operación 1" 
+        "status": true,
+        "icon": "/matrix.png",
+        "title": "Ec. Lineal",
+        "link": "./ec-lineal", 
     },
     {
-        "icon": "test",
-        "title": "Operación 2" 
+        "status": true,
+        "icon": "/cosine.png",
+        "title": "Interpolacion",
+        "link": "./interpolation", 
     },
     {
-        "icon": "test",
-        "title": "Operación 3" 
+        "status": false,
+        "icon": "/matrix.png",
+        "title": "Operación 3", 
+        "link": "./", 
     }
 ]
