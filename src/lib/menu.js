@@ -7,6 +7,12 @@ export const menu = [
     },
     {
         "status": true,
+        "icon": "/matrix.png",
+        "title": "Autovalor", 
+        "link": "./autovalor", 
+    },
+    {
+        "status": true,
         "icon": "/cosine.png",
         "title": "Interpolacion",
         "link": "./interpolation", 

@@ -59,6 +59,12 @@ export default function Home() {
           <div>Calcular</div>
           <div>-&gt;</div>
         </button>
+        <button
+          className={styles.calc}
+          onClick={() => location.reload()}>
+          <div>Recargar</div>
+          <div></div>
+        </button>
       </div>
       <div className={styles.result}>
         <div className={styles.resultTitle}>Resultados</div>

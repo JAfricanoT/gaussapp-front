@@ -20,7 +20,7 @@ export default function Home() {
   // console.log(JSONdata)
 
   // API endpoint para enviar los datos.
-  const endpoint = 'http://127.0.0.1:8000/interpolacion?random=true'
+  const endpoint = 'http://127.0.0.1:8000/autovalores?random=true'
 
   // Headers con los que se envian los datos a la API
   const options = {
@@ -35,49 +35,21 @@ export default function Home() {
   return (
     <div className={styles.wrapper}>
       <div className={styles.config}>
-        <div className={styles.paramTitle}>Interpolación</div>
+        <div className={styles.paramTitle}>Autovalor</div>
         <div className={styles.paramWrapper}>
           {result
-            ? <div className={styles.vectors}>
-              <div className={styles.vector}>
-                <div style={styles.vectorTitle}>
-                  X:
-                </div>
-                <div className={styles.matriz}>
-                  {result
-                    ? result.problema.x.map(digito => (
+            ? <div className={styles.matriz}>
+              {result
+                ? result.problema.matriz.map(fila => (
+                  <div key={fila} className={styles.fila}>
+                    {fila.map(digito => (
                       <div key={digito} className={styles.digito}>
                         {digito.toFixed(2)}
                       </div>
-                    ))
-                    : ''}
-                </div>
-              </div>
-              <div className={styles.vector}>
-                <div style={styles.vectorTitle}>
-                  Y:
-                </div>
-                <div className={styles.matriz}>
-                  {result
-                    ? result.problema.y.map(digito => (
-                      <div key={digito} className={styles.digito}>
-                        {digito.toFixed(2)}
-                      </div>
-                    ))
-                    : ''}
-                </div>
-              </div>
-              <div className={styles.vector}>
-                <div style={styles.vectorTitle}>
-                  X<sub>0</sub> :
-                </div>
-                {result
-                  ? <div className={styles.digito}>
-                    {result.problema.x0.toFixed(2)}
+                    ))}
                   </div>
-                  : ''
-                }
-              </div>
+                ))
+                : ''}
             </div>
             : ''}
         </div>
@@ -97,18 +69,18 @@ export default function Home() {
       <div className={styles.result}>
         <div className={styles.resultTitle}>Resultados</div>
         <div className={styles.resultWrapper}>
-          {calcular
+        {calcular
             ? <div className={styles.operationsWrapper}>
               <div>
                 <div className={styles.resultTitle}>Solución</div>
                 <div className={styles.soluciones}>
                   <div className={styles.vector}>
                     <div style={styles.vectorTitle}>
-                      Y<sub>0</sub> :
+                      Autovalor:
                     </div>
                     {result
                       ? <div className={styles.digito}>
-                        {result.solucion.y0.toFixed(2)}
+                        {result.solucion.autovalor.toFixed(2)}
                       </div>
                       : ''
                     }
