@@ -14,6 +14,9 @@ export default function useFetch (endpoint, options)  {
                 // Recibir los datos desde el servidor como JSON
                 const result = await response.json()
                 setData(result)
+
+                console.log(result)
+
             } catch (err) {
                 console.error(err)
             }
